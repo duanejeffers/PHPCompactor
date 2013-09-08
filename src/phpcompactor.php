@@ -27,7 +27,7 @@ $compactor = new Compactor($target);
 $compactor->setFilter(function ($in)
 {
   $in = preg_replace('/.*\/\/ DEBUG ONLY/','',$in);
-  return preg_replace('/.*->logger->.*/','',$in);
+  return preg_replace('/.*->logger->.*\/','',$in);
 });
 */
 $compactor->exclude('framework.php');
